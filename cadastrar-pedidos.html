@@ -1,0 +1,17 @@
+<h2>Cadastrar pedido</h2>
+<label for="titulo">Título do pedido:</label>
+<input
+id="titulo"
+type="text"
+[(ngModel)]="titulo"
+placeholder="Digite o título do pedido"
+>
+<label for="prazo">Prazo:</label>
+<input
+id="prazo"
+type="date"
+[(ngModel)]="prazo"
+>
+<button (click)="cadastrar()">Cadastrar</button>
+
+<a routerLink="/pedidos">Ver lista de pedidos</a>

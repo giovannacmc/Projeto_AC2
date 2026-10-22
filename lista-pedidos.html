@@ -1,0 +1,28 @@
+
+<div *ngFor="let pokemon of pedidosService.listar()">
+  <h3>{{ pokemon.titulo }}</h3>
+
+  <p>Status: {{ pokemon.status }}</p>
+
+  <button type="button" (click)="aceitar(pokemon.id)">
+    Aceitar
+  </button>
+
+  <button type="button" (click)="emPreparo(pokemon.id)">
+    Em Preparo
+  </button>
+
+  <button type="button" (click)="emRota(pokemon.id)">
+    Em Rota
+  </button>
+
+  <button type="button" (click)="concluir(pokemon.id)">
+    Entregue
+  </button>
+
+  <button type="button" (click)="cancelarPedido(pokemon.id)">
+    Cancelar Pedido
+  </button>
+</div>
+
+<a routerLink="/cadastro">Voltar ao cadastro</a>
